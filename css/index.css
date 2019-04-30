@@ -39,6 +39,19 @@ nav:before{
     .f2_bottom_top{
         top:14%;left:40%!important;
     }
+    .f1_left_top1{
+        left:-95px!important;
+
+    }
+    .f1_right{
+        padding:1.2rem 6rem 0!important;
+    }
+    .float-right_s1{
+        top:32px!important;left:112px!important;
+    }
+    .go_top{
+        top:86%;left:90%!important;
+    }
 }
 @media screen and (max-width: 767px){
     nav{
@@ -69,6 +82,15 @@ nav:before{
     .f2_bottom_top{
         top:14%;left:35%!important;
     }
+    .f1_right{
+        padding:1.2rem 4rem 0!important;
+    }
+    .float-right_s1{
+        top:32px!important;left:76px!important;
+    }
+    .go_top{
+        top:86%;left:88%!important;
+    }
 }
 @media screen and (min-width: 1200px){
     .f1_left_img1{
@@ -86,6 +108,15 @@ nav:before{
     }
     .f2_bottom_top{
         top:14%;left:43%!important;
+    }
+    .f1_right{
+        padding:1.8rem 3rem 0!important;
+    }
+    .float-right_s1{
+        top:43px!important;left:55px!important;
+    }
+    .go_top{
+        top:86%;left:90%!important;
     }
 }
 
@@ -110,6 +141,13 @@ h2{
 .f1_left{
     height: 526px;
     padding: 45px 56px 0;
+    position: relative;
+}
+.f1_left_top1{
+    position: absolute;
+    top:1px;left:1px;
+    width:63px;height: 63px;
+    background: url(../../img/comm/icon.png) no-repeat 70% 0%;
 }
 .f1_center div{
     height: 264px;
@@ -162,11 +200,18 @@ h6>a:hover{
     color:#f26552 !important;
     text-decoration: none;
 }
-#parent>div{
+#parent>div,#parent1>div,#parent2>div{
     border:none!important;
 }
-.fi_right{
+.f1_right{
     height: 526px;
+    position: relative;
+}
+.float-right_s1{
+    width: 21px;height: 18px;
+    position: absolute;
+    top:38px;left: 40px;
+    background: url(../../img/comm/icon.png) no-repeat 0% 51%;
 }
 h3{
     font-family: "Microsoft Yahei", arial,sans-serif;
@@ -218,16 +263,16 @@ h4{
     width:20px;height: 20px;
     background:url(../../img/comm/icon.png) no-repeat 82% 53%;
 }
-ul{
+.ul2{
     height: 200px;
     position: relative;
 }
-ul li img{
+.ul2 li img{
     margin-top:120%;
     width:70px;height: 70px;
     border-radius: 50%;
 }
-ul li p{
+.ul2 li p{
     text-align: center;
     margin-top: 5px;
 }
@@ -237,4 +282,58 @@ ul li p{
     top:14%;left:42%;
     background-size:100% !important;
     background: url(../../img/comm/rmtj.png) no-repeat;
+}
+.card-body{
+    display: none;
+    height:90px;
+    padding:0;
+    margin:2px 0px 0 20px;
+}
+.card-header{
+    position: relative;
+}
+.card:hover .card-header{
+   display: none;
+}
+.card:hover .card-body{
+    display: block!important;
+}
+.card_f1b{
+    padding:0;
+    margin:5px 0 0 22px;
+    display:block !important;
+}
+.f_center{
+    height: 176px!important;
+    padding:18px 18px;
+}
+.card_f1{
+    display:none !important;
+}
+.f_cp1{
+    padding-bottom: 5px;
+    border-bottom: 1px solid #f5f5f5;
+    margin-bottom:5px;
+}
+.f_center_a{
+    font-family: "Microsoft Yahei", arial,sans-serif;
+    font-size: 14px;
+    color: #212121;
+}
+.look{
+    display: block;
+    position: absolute;
+    top:12px;left:75%;
+    width: 14px;height: 9px;
+    margin:6px 6px 0 0;
+    background: url(../../img/comm/icon.png) no-repeat 99% 52%;
+}
+.look2{
+    position: absolute;
+    top:13px;left:84%;
+}
+.go_top{
+    width:60px;
+    position: fixed;
+    top:86%;left:93.5%;
 }
