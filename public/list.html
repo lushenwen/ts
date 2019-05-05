@@ -1,84 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Document</title>
-		<meta charset="UTF-8">
-		<style>
-			table{border:1px solid #000;}
-			table th,table td{border:1px solid #000;}
-		</style>
-	</head>
-	<body onload="getList()">
-		<table>
-			<thead>
-				<tr>
-					<th>登录名称</th>
-					<th>电子邮箱</th>
-					<th>联系方式</th>
-					<th>会员等级</th>
-					<th>用户性别</th>
-					<th>操作</th>
-				</tr>
-			</thead>
-			<tbody id="t1">
-				
-			</tbody>
-		</table>
-		<script>
-			function getList(){
-				var xhr=new XMLHttpRequest();
-				xhr.onreadystatechange=function(){
-					if(xhr.readyState==4&&xhr.status==200){
-						var result=xhr.responseText;
-						var arr=JSON.parse(result);
-						var html="";
-						for(var i=0;i<arr.length;i++){
-							var getG=""
-							if(arr[i].gender==1){
-								getG="男";
-							}else if(arr[i].gender==0){
-								getG="女";
-							}else{
-								getG="不详";
-							}
-							var getV=""
-							if(arr[i].vip==1){
-								getV="超级会员";
-							}else{
-								getV="普通会员";
-							}
-							html+=`
-									<tr>
-										<td>${arr[i].uname}</td>
-										<td>${arr[i].email}</td>
-										<td>${arr[i].phone}</td>
-										<td>${getV}</td>
-										<td>${getG}</td>
-										<td>
-											<a href="javascript:delUser(${arr[i].uid})">删除</a>
-											<a href="update.html?uid=${arr[i].uid}">修改</a>
-										</td>
-									</tr>
-							`;
-						}
-						t1.innerHTML=html;
-					}
-				}
-				xhr.open("get","/user/list",true);
-				xhr.send();
-			}
-			function delUser(uid){
-				var xhr=new XMLHttpRequest();
-				xhr.onreadystatechange=function(){
-					if(xhr.readyState==4&&xhr.status==200){
-						var result=xhr.responseText;
-						alert(result);
-						getList();
-					}
-				}
-				xhr.open("get","/user/del?uid="+uid,true);
-				xhr.send();
-			}
-		</script>
-	</body>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/comm.css"/>
+    <link rel="stylesheet" href="css/list.css"/>
+</head>
+<body>
+<header>
+    <iframe src="header.html" frameborder="0" scolling="no" class="my_header"></iframe>
+</header>   
+<div class="container">
+
+</div>
+<footer>
+    <iframe src="footer.html" frameborder="0" scrolling="no" class="my_footer"></iframe>
+</footer>
+</body>
 </html>
