@@ -302,3 +302,48 @@ h5:hover{
  .my_right{
      padding:43px 40px 0
  }
+.bk{
+    background-color: #fafafa;
+}
+.bk>div{
+    padding:43px 40px 0;
+    position: relative;
+}
+.r_font{
+    font-size: 16px;
+    color: #212121;
+}
+.r_font14{
+    color: #212121;
+    font-size: 14px; 
+}
+.r_s1,.r_s2{
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    border: 1px solid #d2d2d2;
+    border-radius: 2px;
+    text-align: center;
+    line-height: 12.5px;
+    cursor: pointer;
+    position: absolute;
+    right:64px;
+    top:47.5px;
+}
+.r_s2{
+    right:40px;
+}
+.r_s1>s,.r_s2>s{
+    width: 7px;
+    height: 8px;
+    display: inline-block;
+    background: url(../../img/sjIcon.png) no-repeat -39px -97px;
+}
+.r_s2>s{
+    background-position:-50px -97px!important; 
+}
+.r_top_ul{
+    list-style:none; 
+    display: flex;
+    justify-content: space-between;
+}
